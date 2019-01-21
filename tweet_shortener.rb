@@ -18,8 +18,8 @@ def word_substituter(str)
   # replaces long words with their expected short form
 
     str.split(" ").collect do |word|
-      if dictionary.keys.include?(word.downcase)
-        word = dictionary[word.downcase]
+      if dictionary.keys.include?(word)
+        word = dictionary[word]
       else
         word
     end
