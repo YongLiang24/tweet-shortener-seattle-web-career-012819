@@ -30,5 +30,3 @@ def bulk_tweet_shortener(str1)
     puts word_substituter(text) #call the previous method to substitute the text
   end
 end
-
-
