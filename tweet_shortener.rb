@@ -19,9 +19,9 @@ def word_substituter(str)
   array=[]
     str.split(" ").collect do |word|
       if dictionary.keys.include?(word.downcase)
-        return array = dictionary[word.downcase]
+         array = dictionary[word.downcase]
       else
-        return word
+         word
     end
   end
   k= array.join(" ")
