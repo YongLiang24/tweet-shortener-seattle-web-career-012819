@@ -26,7 +26,17 @@ def word_substituter(str)
 end
 
 def bulk_tweet_shortener(str)
-  str.split(" ").collect do |text|
+  str.collect do |text|
     puts word_substituter(text) #call the previous method to substitute the text
+  end
+end
+
+def selective_tweet_shortener(str)
+  str.split(" ").collect do |text|
+    if text.length > 140
+      word_substituter(text)
+    elsif text.length <= 140
+      text
+    end
   end
 end
