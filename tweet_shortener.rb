@@ -25,8 +25,8 @@ def word_substituter(str)
   end.join(" ") #convert the array back to string of text
 end
 
-def bulk_tweet_shortener(str1)
-  str1.collect do |text|
+def bulk_tweet_shortener(str)
+  str.collect do |text|
     puts word_substituter(text) #call the previous method to substitute the text
   end
 end
