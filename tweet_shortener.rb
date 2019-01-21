@@ -26,7 +26,7 @@ def word_substituter(str)
 end
 
 def bulk_tweet_shortener(str)
-  str.split(" ")collect do |text|
+  str.split(" ").collect do |text|
     puts word_substituter(text) #call the previous method to substitute the text
   end
 end
