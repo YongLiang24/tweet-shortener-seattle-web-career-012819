@@ -33,7 +33,7 @@ end
 
 def selective_tweet_shortener(str)
   str.split(" ").collect do |text|
-    if text.length > 140 #substitute the text if greater than 140 words
+    if text.size > 140 #substitute the text if greater than 140 words
       word_substituter(text)
     elsif text.length <= 140
       text
