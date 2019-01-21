@@ -16,13 +16,13 @@ end
 
 def word_substituter(str)
   # replaces long words with their expected short form
-    str.split(" ").collect do |short_word|
-      if dictionary.keys.include?(short_word.downcase)
+    str.split(" ").collect do |short_word| #convert str to an array then iterate the array
+      if dictionary.keys.include?(short_word.downcase) #if find matching words then shorten them 
          short_word = dictionary[short_word.downcase]
       else
          short_word
     end
-  end.join(" ")
+  end.join(" ") #convert the array back to string of text
 end
 
 def bulk_tweet_shortener(tweet)
