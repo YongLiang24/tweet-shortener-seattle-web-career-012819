@@ -33,8 +33,8 @@ end
 
 def selective_tweet_shortener(text)
   if text.chars.length > 140
-    word_substituter(tweet)
+    word_substituter(text)
   else
-    tweet
+    text
   end
 end
