@@ -27,6 +27,16 @@ end
 
 def bulk_tweet_shortener(str)
   str.collect do |text|
-    puts word_substituter(text)
+    puts word_substituter(text) #call the previous method to substitute the text 
+  end
+end
+
+def selective_tweet_shortener(tweet)
+  tweet.split(" ").map do |phrase|
+    if phrase.length > 140
+      word_substituter(phrase)
+    elsif phrase.length <= 140
+      phrase
+    end
   end
 end
