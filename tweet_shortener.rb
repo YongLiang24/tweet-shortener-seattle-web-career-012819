@@ -16,12 +16,11 @@ end
 
 def word_substituter(str)
   # replaces long words with their expected short form
-  array=[]
-    str.split(" ").collect do |word|
-      if dictionary.keys.include?(word.downcase)
-         array = dictionary[word.downcase]
+    str.split(" ").collect do |short_word|
+      if dictionary.keys.include?(short_word.downcase)
+         short_word = dictionary[short_word.downcase]
       else
-         word
+         short_word
     end
   end.join(" ")
 end
